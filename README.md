@@ -56,8 +56,8 @@ python --version
 
 ```bash
 # Cloner le dépôt (ou télécharger le fichier ZIP)
-git clone https://github.com/votre-org/tp-vision-intensite.git
-cd tp-vision-intensite
+git clone https://github.com/INF4038.git
+cd INF4038
 ```
 
 ### Étape 3 : Créer un environnement virtuel
