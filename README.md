@@ -56,7 +56,7 @@ python --version
 
 ```bash
 # Cloner le dépôt (ou télécharger le fichier ZIP)
-git clone https://github.com/INF4038.git
+git clone https://github.com/leadassi/INF4038.git
 cd INF4038
 ```
 
