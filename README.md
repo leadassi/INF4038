@@ -14,31 +14,63 @@
 
 ---
 
-## 🎯 Objectifs du TP
+## 🎯 Présentation du TP
 
-À l'issue de ce TP, vous serez capable de :
+Ce TP pratique a pour objectif d'illustrer l'impact des méthodes de prétraitement d'intensité sur la robustesse des descripteurs globaux en vision par ordinateur.
 
-1. **Comprendre** l'impact des variations d'illumination sur les images numériques
-2. **Implémenter** les principales méthodes de prétraitement d'intensité
-3. **Analyser** les histogrammes d'images et leur distribution
-4. **Comparer** les performances des différentes stratégies :
-   - Normalisation Min-Max
-   - Égalisation globale (GHE)
-   - Égalisation adaptative (CLAHE)
-5. **Interpréter** les résultats sur des images réelles
+L'application permet de :
+- Modifier l'éclairage d'une image (luminosité, contraste, gamma)
+- Appliquer différentes méthodes d'égalisation d'histogramme
+- Extraire des descripteurs globaux (HOG, LBP, histogrammes de couleurs)
+- Comparer la robustesse des descripteurs face aux variations d'éclairage
 
 ---
 
-## 📋 Prérequis
+## 📚 Objectifs pédagogiques
 
-### Connaissances théoriques
-- Notions de base en traitement d'images
-- Compréhension des histogrammes
-- Notions élémentaires de Python
+| Objectif | Description |
+|----------|-------------|
+| 🎯 **Comprendre** | L'impact des variations d'illumination sur les images numériques |
+| 🔧 **Implémenter** | Les principales méthodes de normalisation et d'égalisation |
+| 📊 **Analyser** | Les histogrammes et leur distribution |
+| 🔬 **Comparer** | Les performances de GHE vs CLAHE vs Min-Max |
+| 📈 **Évaluer** | La robustesse des descripteurs globaux |
 
-### Logiciels requis
-- Python 3.8 ou supérieur
-- Un éditeur de code (VS Code, PyCharm, ou tout autre)
+---
+
+## ✨ Fonctionnalités
+
+### 1. Modification d'éclairage
+
+| Type | Plage | Description |
+|------|-------|-------------|
+| 🌞 **Luminosité** | -150 à 150 | Assombrir ou éclaircir l'image |
+| 🎨 **Contraste** | -40 à 40 | Augmenter ou diminuer le contraste |
+| 📷 **Gamma** | -80 à 80 | Correction d'exposition non linéaire |
+
+### 2. Méthodes d'égalisation
+
+| Méthode | Description |
+|---------|-------------|
+| **Originale (Brute)** | Image sans modification (référence) |
+| **Normalisation Min-Max** | Redimensionnement linéaire des intensités |
+| **Égalisation Globale (GHE)** | Distribution uniforme sur toute l'image |
+| **Égalisation Adaptative (CLAHE)** | Égalisation locale avec limitation de contraste |
+
+### 3. Descripteurs globaux
+
+| Descripteur | Dimension | Description |
+|-------------|-----------|-------------|
+| **Histogramme de couleurs** | 96 (32×3) | Distribution des couleurs RGB |
+| **LBP** (Local Binary Patterns) | 10 (uniform) | Descripteur de texture |
+| **HOG** (Histogram of Oriented Gradients) | Variable | Descripteur de forme |
+
+### 4. Visualisations
+
+- 📊 Affichage côte à côte des images (originale, éclairée, égalisées)
+- 📈 Histogrammes des intensités pour chaque image
+- 📉 Graphiques de comparaison des descripteurs
+- 📋 Tableaux récapitulatifs des similarités
 
 ---
 
